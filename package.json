@@ -1,0 +1,29 @@
+{
+    "name": "team-profile-generator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+      "test": "tests"
+    },
+    "dependencies": {
+      "email-validator": "^2.0.4",
+      "inquirer": "^8.1.1",
+      "jest": "^27.0.6"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://https://github.com/Paul-renobato/Week_10-Team_Profile_Gen.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Paul-renobato/Week_10-Team_Profile_Gen/issues"
+    },
+    "homepage": "https://github.com/Paul-renobato/Week_10-Team_Profile_Gen#readme"
+  }
