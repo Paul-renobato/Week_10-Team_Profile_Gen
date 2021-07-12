@@ -1,6 +1,7 @@
-const Engineer = require('');
-const Intern = require('');
-const Manager = require('');
+const Engineer = require('./TeamMembers/Engineer');
+const Intern = require('./TeamMembers/Intern');
+const Manager = require('./TeamMembers/Manager');
+const Employee = require('./TeamMembers/Employee');
 const fs = require('fs');
 const inquirer = require('inquirer')
 const Manager1 = [];
@@ -21,10 +22,10 @@ const addTeamMember= () => {
             firstQuestion();
             }
             else {
-            console.log(manager1, engineer1, intern1);
-            module.exports= manager1;
-            module.exports= engineers1;
-            module.exports= intern1;
+            console.log(Manager1, Engineer1, Intern1);
+            module.exports= Manager1;
+            module.exports= Engineer1;
+            module.exports= Intern1;
             return answers;
             }
         });
