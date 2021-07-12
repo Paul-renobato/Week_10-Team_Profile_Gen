@@ -162,3 +162,35 @@ const managerQuestions= () => {
             addTeamMember();
         })
 };
+const generateTopHtml = () => {
+return`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class= "jumbotron jumbotron-fluid bg-danger">
+        <div class= "container">
+            <h1 class= "display-4 text-center">My Team</h1>
+        </div>
+    </div>`
+    };
+const generateManagerCard = (Managers) => {
+return`<div class= "row justify-content-center">
+        <div class= "card bg-light mb-4" style="max-width: 18rem;">
+        <div class= "card-header">${Managers.name}</div>
+        <div class= "card-header">Manager</div>
+        <div class= "card-body">
+            <div class= "list-group">
+                <li class= "list-group-item">ID:${Managers.id} </li>
+                <li class= "list-group-item">Email:${Managers.email} </li>
+                <li class= "list-group-item">Office:${Managers.office} </li>
+            </div>
+        </div>
+        </div>`
+    };
