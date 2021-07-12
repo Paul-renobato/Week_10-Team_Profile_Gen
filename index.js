@@ -26,6 +26,11 @@ const addTeamMember= () => {
             module.exports= Manager1;
             module.exports= Engineer1;
             module.exports= Intern1;
+            topHtmlFile();
+            engineerGenerator();
+            managerGenerator();
+            internGenerator();
+            bottomHtmlFile();
             return answers;
             }
         });
@@ -192,5 +197,55 @@ return`<div class= "row justify-content-center">
                 <li class= "list-group-item">Office:${Managers.office} </li>
             </div>
         </div>
-        </div>`
+    </div>`
     };
+const generateEngineerCard = (Engineers) => {
+    return`
+    <div class= "card bg-light mb-4" style="max-width: 18rem;">
+    <div class= "card-header">${Engineers.name}</div>
+    <div class= "card-header">Engineer</div>
+    <div class= "card-body">
+        <div class= "list-group">
+            <li class= "list-group-item">ID:${Engineers.id} </li>
+            <li class= "list-group-item">Email:${Engineers.email} </li>
+            <li class= "list-group-item">Github:${Engineers.github} </li>
+        </div>
+    </div>
+    </div>`
+    };
+    const generateInternCard = (Interns) => {
+    return`<div class= "card bg-light mb-4" style="max-width: 18rem;">
+        <div class= "card-header">${Interns.name}</div>
+        <div class= "card-header">Intern</div>
+        <div class= "card-body">
+            <div class= "list-group">
+                <li class= "list-group-item">ID:${Interns.id} </li>
+                <li class= "list-group-item">Email:${Interns.email} </li>
+                <li class= "list-group-item">School:${Interns.school} </li>
+            </div>
+        </div>
+        </div>
+</div>`
+    };
+const generateBottomHtml = () => {
+    return`</body>
+    </html>`
+};
+const topHtmlFile = () => {
+    fs.appendFileSync("index.html", generateTopHtml());
+};
+const managerGenerator = () => {
+Manager1.forEach((Managers => {
+    fs.appendFileSync("index.html", generateManagerCard(Managers))
+}))};
+const engineerGenerator = () => {
+Engineer1.forEach((Engineers => {
+    fs.appendFileSync("index.html", generateEngineerCard(Engineers))
+}))};
+const internGenerator = () => {
+Intern1.forEach((Interns => {
+    fs.appendFileSync("index.html", generateInternCard(Interns))
+}))};
+const bottomHtmlFile = () => {
+    fs.appendFileSync("index.html", generateBottomHtml());
+}
